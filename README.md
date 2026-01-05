@@ -41,8 +41,7 @@ tracks state in sqlite for restart safety and auditability.
 </div>
 
 <a id="quick-start"></a>
-## Quick Start
-<img src="https://img.shields.io/badge/Quick%20Start-4%20steps-059669?style=for-the-badge&logo=serverless&logoColor=white" alt="Quick Start badge" />
+<h2><img src="https://img.shields.io/badge/Quick%20Start-4%20steps-059669?style=for-the-badge&logo=serverless&logoColor=white" alt="Quick Start badge" /></h2>
 
 1. Create a working directory (this is where `.env` and output will live).
 
@@ -75,8 +74,7 @@ Version pinning: append `@<tag>` (or `@<commit>`) to the git URL, e.g.
 `uvx --from git+https://github.com/andrewmaspero/imap-icloud-migration@v0.1.0 imap-icloud-migration --help`.
 
 <a id="features"></a>
-## Features
-<img src="https://img.shields.io/badge/Features-Highlights-7c3aed?style=for-the-badge&logo=simpleicons&logoColor=white" alt="Features badge" />
+<h2><img src="https://img.shields.io/badge/Features-Highlights-7c3aed?style=for-the-badge&logo=simpleicons&logoColor=white" alt="Features badge" /></h2>
 
 | Feature Badge                                                                                             | Details                                                                 |
 | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- |
@@ -88,8 +86,7 @@ Version pinning: append `@<tag>` (or `@<commit>`) to the git URL, e.g.
 | ![Verify](https://img.shields.io/badge/Verify-Checksums-6b7280?style=flat&logo=gnubash&logoColor=white)          | Verify `.eml` hashes against sqlite, plus JSON summary reports.          |
 
 <a id="icloud-origin"></a>
-## iCloud+ Origin
-<img src="https://img.shields.io/badge/iCloud%2B-Why%20This%20Exists-111827?style=for-the-badge&logo=apple&logoColor=white" alt="iCloud+ Origin badge" />
+<h2><img src="https://img.shields.io/badge/iCloud%2B-Why%20This%20Exists-111827?style=for-the-badge&logo=apple&logoColor=white" alt="iCloud+ Origin badge" /></h2>
 
 This tool exists because iCloud+ includes free custom domain email hosting, but moving that
 mailbox elsewhere is painful. There is no one-click export to Gmail that preserves structure,
@@ -104,8 +101,7 @@ The result is a deterministic pipeline that:
 - Pushes into Gmail via official Gmail API endpoints
 
 <a id="how-it-works"></a>
-## How It Works
-<img src="https://img.shields.io/badge/How%20It%20Works-Pipeline-1f2937?style=for-the-badge&logo=planetscale&logoColor=white" alt="How It Works badge" />
+<h2><img src="https://img.shields.io/badge/How%20It%20Works-Pipeline-1f2937?style=for-the-badge&logo=planetscale&logoColor=white" alt="How It Works badge" /></h2>
 
 1. Discover mailboxes via IMAP LIST and scan counts.
 2. For each mailbox, fetch messages in UID batches using IMAP SEARCH and FETCH.
@@ -116,8 +112,7 @@ The result is a deterministic pipeline that:
 7. Status transitions are tracked per message: discovered -> downloaded -> imported.
 
 <a id="configuration"></a>
-## Configuration
-<img src="https://img.shields.io/badge/Configuration-Env%20Vars-0ea5e9?style=for-the-badge&logo=gnubash&logoColor=white" alt="Configuration badge" />
+<h2><img src="https://img.shields.io/badge/Configuration-Env%20Vars-0ea5e9?style=for-the-badge&logo=gnubash&logoColor=white" alt="Configuration badge" /></h2>
 
 Configuration is validated with Pydantic Settings. All environment variables use the `MIG_`
 prefix and `__` for nesting. A `.env` file is loaded automatically from the current working
@@ -188,8 +183,7 @@ directory, or pass `--env-file` to any CLI command.
 | MIG_LOGGING__JSON_LOGS | no | true | bool | Emit JSON logs when true. |
 
 <a id="gmail-oauth"></a>
-## Gmail OAuth
-<img src="https://img.shields.io/badge/Gmail-OAuth%20Setup-ea4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail OAuth badge" />
+<h2><img src="https://img.shields.io/badge/Gmail-OAuth%20Setup-ea4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail OAuth badge" /></h2>
 
 1. Create a Google Cloud project.
 2. Enable the Gmail API.
@@ -203,8 +197,7 @@ Notes:
 - `MIG_GMAIL__TOKEN_FILE` must be a file path, not a directory; it will be created on first run.
 
 <a id="icloud-custom-domain"></a>
-## iCloud+ Custom Domain
-<img src="https://img.shields.io/badge/iCloud%2B-Custom%20Domain%20Alias-111827?style=for-the-badge&logo=apple&logoColor=white" alt="iCloud+ Custom Domain badge" />
+<h2><img src="https://img.shields.io/badge/iCloud%2B-Custom%20Domain%20Alias-111827?style=for-the-badge&logo=apple&logoColor=white" alt="iCloud+ Custom Domain badge" /></h2>
 
 It is normal to authenticate IMAP using your primary iCloud address even if you primarily use
 a custom domain alias in Apple Mail. To migrate only a specific alias into Gmail:
@@ -219,8 +212,7 @@ Filtering matches common headers (From/To/Cc/Bcc plus Delivered-To, X-Original-T
 Envelope-To). Messages that do not reference the target address are skipped.
 
 <a id="operations"></a>
-## Operations
-<img src="https://img.shields.io/badge/Operations-Runbook-0f766e?style=for-the-badge&logo=serverfault&logoColor=white" alt="Operations badge" />
+<h2><img src="https://img.shields.io/badge/Operations-Runbook-0f766e?style=for-the-badge&logo=serverfault&logoColor=white" alt="Operations badge" /></h2>
 
 ### Output layout
 
@@ -257,8 +249,7 @@ uvx --from git+https://github.com/andrewmaspero/imap-icloud-migration imap-iclou
 Writes a JSON summary report into the `reports/` directory.
 
 <a id="folder-mapping"></a>
-## Folder Mapping
-<img src="https://img.shields.io/badge/Folder%20Mapping-Gmail%20Labels-6366f1?style=for-the-badge&logo=gmail&logoColor=white" alt="Folder Mapping badge" />
+<h2><img src="https://img.shields.io/badge/Folder%20Mapping-Gmail%20Labels-6366f1?style=for-the-badge&logo=gmail&logoColor=white" alt="Folder Mapping badge" /></h2>
 
 - IMAP folders map to Gmail custom labels under `MIG_GMAIL__LABEL_PREFIX`.
 - Common system folders also receive Gmail system labels:
@@ -269,8 +260,7 @@ Writes a JSON summary report into the `reports/` directory.
   - `Draft*` -> `DRAFT`
 
 <a id="dev-workflow"></a>
-## Developer Workflow
-<img src="https://img.shields.io/badge/Developer-Workflow-6366f1?style=for-the-badge&logo=git&logoColor=white" alt="Developer Workflow badge" />
+<h2><img src="https://img.shields.io/badge/Developer-Workflow-6366f1?style=for-the-badge&logo=git&logoColor=white" alt="Developer Workflow badge" /></h2>
 
 From a cloned repo, run:
 
@@ -282,8 +272,7 @@ uv run pytest
 ```
 
 <a id="ci-cd"></a>
-## CI/CD
-<img src="https://img.shields.io/badge/CI%2FCD-Overview-1F4B99?style=for-the-badge&logo=gnubash&logoColor=white" alt="CI/CD badge" />
+<h2><img src="https://img.shields.io/badge/CI%2FCD-Overview-1F4B99?style=for-the-badge&logo=gnubash&logoColor=white" alt="CI/CD badge" /></h2>
 
 GitHub Actions runs the same checks as the local workflow on push and pull requests:
 
@@ -293,8 +282,7 @@ GitHub Actions runs the same checks as the local workflow on push and pull reque
 - `pytest`
 
 <a id="architecture"></a>
-## Architecture
-<img src="https://img.shields.io/badge/Architecture-Stack%20Map-374151?style=for-the-badge&logo=planetscale&logoColor=white" alt="Architecture badge" />
+<h2><img src="https://img.shields.io/badge/Architecture-Stack%20Map-374151?style=for-the-badge&logo=planetscale&logoColor=white" alt="Architecture badge" /></h2>
 
 - CLI: Typer commands in `src/imap_icloud_migration/cli/`.
 - IMAP: async fetchers and a connection pool in `src/imap_icloud_migration/imap/`.
@@ -304,8 +292,7 @@ GitHub Actions runs the same checks as the local workflow on push and pull reque
 - Orchestration: async pipeline and retry logic in `src/imap_icloud_migration/pipeline/`.
 
 <a id="troubleshooting"></a>
-## Troubleshooting
-<img src="https://img.shields.io/badge/Troubleshooting-Common%20Issues-6b7280?style=for-the-badge&logo=gnubash&logoColor=white" alt="Troubleshooting badge" />
+<h2><img src="https://img.shields.io/badge/Troubleshooting-Common%20Issues-6b7280?style=for-the-badge&logo=gnubash&logoColor=white" alt="Troubleshooting badge" /></h2>
 
 - Missing IMAP settings: set `MIG_IMAP__USERNAME` and `MIG_IMAP__APP_PASSWORD`.
 - Gmail auth errors: confirm `MIG_GMAIL__CREDENTIALS_FILE` exists and is a Desktop app client.
@@ -314,8 +301,7 @@ GitHub Actions runs the same checks as the local workflow on push and pull reque
 - Evidence mismatch: run `verify`, inspect the `.eml` on disk, and re-run with `--reset`.
 
 <a id="notes"></a>
-## Notes
-<img src="https://img.shields.io/badge/Notes-Security%20%26%20Data-111827?style=for-the-badge&logo=gnubash&logoColor=white" alt="Notes badge" />
+<h2><img src="https://img.shields.io/badge/Notes-Security%20%26%20Data-111827?style=for-the-badge&logo=gnubash&logoColor=white" alt="Notes badge" /></h2>
 
 - Do not commit secrets, OAuth client JSON, or Gmail token files.
 - `migration_storage/` and `MIG_STORAGE__ROOT_DIR` output are generated data.
