@@ -1,0 +1,31 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# local secrets / tokens
+.env
+.secrets/
+*.token.json
+token.json
+
+# migration output
+data/
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+credentials.json
+# Virtual environments
+.venv
+migration_storage
+token.json
+.history
+AGENTS.md
+.gitignore
